@@ -15,6 +15,17 @@ function setup() {
 function draw() {
 
 }
+
+function mouseReleased() {
+if (bells.isPlaying()) {
+  bells.pause();
+  }
+  else {
+    bells.play();
+  }
+
+}
+
 function touchStarted() {
   getAudioContext().resume();
 }

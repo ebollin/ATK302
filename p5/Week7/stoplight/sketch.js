@@ -1,5 +1,7 @@
 var myState = 0 ;
 var timer = 0 ;
+var x = 0 ;
+var velocity = 10
 
 function setup() {
   // put setup code here
@@ -32,6 +34,8 @@ switch(myState){
   fill ("black")
   ellipse(400, 530, 100, 100)
 
+  velocity = 0
+
 
   timer++ ;
   if (timer > 100) {
@@ -53,6 +57,8 @@ break ;
   fill ("green")
   ellipse(400, 530, 100, 100)
 
+  velocity = 10
+
   timer++ ;
   if (timer > 100) {
     myState = 2 ;
@@ -72,6 +78,7 @@ break ;
 
   fill ("black")
   ellipse(400, 530, 100, 100)
+  velocity = 4
 
   timer++ ;
   if (timer > 100) {
@@ -84,5 +91,14 @@ break ;
 
 
 
+} //end of switch statement
+
+rect(x, height-100, 50, 10) ;
+ellipse(x, height-80, 30, 30)
+x = x + 10 ;
+if (x > width) {
+  x = 0 ;
 }
-}
+
+
+} //end of draw function

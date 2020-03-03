@@ -53,9 +53,10 @@ function draw() {
     case 0:
 
 
-      // fill('#ED225D');   // SETS the color
-      // textFont(font);  // SETS the font
+      fill('black');   // SETS the color
+      textFont(font);  // SETS the font
       // image(basketball, 0, 0, 800, 580) ;
+
       textSize(36); // SETS the size of the font
       text("Click to help me edit!!", 10, 50)
 

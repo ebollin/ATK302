@@ -6,10 +6,14 @@ var num;
 var distance;
 var places = [];
 var reggieImg;
+var cool ;
+var notcool ;
 
 function preload() {
   locationData = getCurrentPosition();
   reggieImg = loadImage('assets/reggie.jpg');
+  cool = loadImage('assets/cool.png');
+  notcool = loadImage('assets/notcool.png');
   // TURN "reggieImg;" into "reggieImg = [];" to create an array of different images
   //reggieImg = loadImage('assets/reggie1.jpg'); //these will change to images of pics in front of the buildings for welcome week
   //reggieImg[2] = loadImage('assets/reggie2.jpg');
@@ -20,8 +24,10 @@ function setup() {
   createCanvas(displayWidth, displayHeight);
   num = 0;
   intervalCurrentPosition(positionPing, 5000);
-  places.push(new Place(40.47859881213726, -88.96815846900026, "Rose's Room", .02, reggieImg)); // new Place object, for CVA room 17
-    places.push(new Place(41.81950094, -88.01843934, "Emily's Room", .02, reggieImg)); // new Place object, for CVA room 17
+  places.push(new Place(40.47859881213726, -88.96815846900026, "Rose's Room", .02, reggieImg));
+    places.push(new Place(41.81950094, -88.01843934, "Emily's Room", .02, cool));
+    places.push(new Place(41.81969421, -88.01824789, "My brother's Room", .02, notcool)); 
+
 
   places.push(new Place(40.50622797365503, -88.99051350503431, "CVA 17", .02, reggieImg)); // new Place object, for CVA room 17
   places.push(new Place(40.50715473783438, -88.99173550368103, "COB", .02, reggieImg)); // new Place object, for COB.... JUST SWITCHED TO NEW COORDINATES
